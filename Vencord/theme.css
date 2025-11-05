@@ -1,0 +1,350 @@
+/**
+ * @name        Sakura Forest
+ * @author      Created from Everforest x Catppuccin hybrid
+ * @version     1.0.0
+ * @description A Discord theme combining Everforest's dark slate greens with Catppuccin's vibrant accents
+ */
+
+:root {
+  /* Sakura Forest Color Palette */
+  /* Dark Slate Green Backgrounds (from Everforest) */
+  --sf-dark1: #2f383e;     /* 47, 56, 62 - Main background */
+  --sf-dark2: #374247;     /* 55, 66, 71 - Secondary background */
+  --sf-dark3: #2b3339;     /* 43, 51, 57 - View background */
+  --sf-dark4: #404552;     /* 64, 69, 82 - Alternate background */
+  --sf-dark5: #2a2e32;     /* 42, 46, 50 - Complementary background */
+  
+  /* Vibrant Accents (from Catppuccin) */
+  --sf-flamingo: #eebebe;  /* 238, 190, 190 - Primary accent/links */
+  --sf-peach: #ef9f76;     /* 239, 159, 118 - Active elements */
+  --sf-green: #a6d189;     /* 166, 209, 137 - Positive/success */
+  --sf-red: #e78284;       /* 231, 130, 132 - Negative/danger */
+  --sf-yellow: #e5c890;    /* 229, 200, 144 - Warning/neutral */
+  --sf-mauve: #ca9ee6;     /* 202, 158, 230 - Visited/secondary accent */
+  --sf-lavender: #a5adce;  /* 165, 173, 206 - Inactive text */
+  --sf-text: #ebf5f0;      /* 235, 245, 240 - Main text (warm mint white) */
+  
+  /* HSL conversions for transparency support */
+  --sf-dark1-hsl: 200deg 13% 21%;
+  --sf-dark2-hsl: 200deg 10% 25%;
+  --sf-dark3-hsl: 200deg 14% 20%;
+  --sf-flamingo-hsl: 0deg 59% 84%;
+  --sf-peach-hsl: 20deg 75% 65%;
+  --sf-green-hsl: 95deg 39% 68%;
+  --sf-red-hsl: 359deg 68% 73%;
+  --sf-yellow-hsl: 40deg 62% 73%;
+  --sf-mauve-hsl: 277deg 59% 76%;
+  --sf-lavender-hsl: 226deg 26% 73%;
+  --sf-text-hsl: 150deg 46% 94%;
+
+  /* Override Nord colors with Sakura Forest palette */
+  --nord-dark1-hsl: var(--sf-dark1-hsl);
+  --nord-dark1: var(--sf-dark1);
+  --nord-dark2-hsl: var(--sf-dark2-hsl);
+  --nord-dark2: var(--sf-dark2);
+  --nord-dark3-hsl: var(--sf-dark3-hsl);
+  --nord-dark3: var(--sf-dark3);
+  --nord-dark4-hsl: 210deg 11% 29%;
+  --nord-dark4: var(--sf-dark4);
+  
+  /* Light colors for text */
+  --nord-light1-hsl: var(--sf-text-hsl);
+  --nord-light1: var(--sf-text);
+  --nord-light2-hsl: var(--sf-text-hsl);
+  --nord-light2: var(--sf-text);
+  --nord-light3-hsl: var(--sf-text-hsl);
+  --nord-light3: var(--sf-text);
+  
+  /* Accent colors */
+  --nord-pink-hsl: var(--sf-flamingo-hsl);
+  --nord-pink: var(--sf-flamingo);
+  --nord-red-hsl: var(--sf-red-hsl);
+  --nord-red: var(--sf-red);
+  --nord-orange-hsl: var(--sf-peach-hsl);
+  --nord-orange: var(--sf-peach);
+  --nord-yellow-hsl: var(--sf-yellow-hsl);
+  --nord-yellow: var(--sf-yellow);
+  --nord-green-hsl: var(--sf-green-hsl);
+  --nord-green: var(--sf-green);
+  
+  /* Link and accent colors */
+  --nord-cyan-hsl: var(--sf-flamingo-hsl);
+  --nord-cyan: var(--sf-flamingo);
+  --nord-blue-hsl: var(--sf-mauve-hsl);
+  --nord-blue: var(--sf-mauve);
+  --nord-turquoise-hsl: var(--sf-green-hsl);
+  --nord-turquoise: var(--sf-green);
+  --nord-green-blue-hsl: var(--sf-green-hsl);
+  --nord-green-blue: var(--sf-green);
+}
+
+.visual-refresh {
+  /* Background neutrals using Everforest greens */
+  --neutral-1-hsl: var(--sf-text-hsl);
+  --neutral-1: var(--sf-text);
+  --neutral-2-hsl: var(--sf-text-hsl);
+  --neutral-2: var(--sf-text);
+  --neutral-4-hsl: var(--sf-text-hsl);
+  --neutral-4: var(--sf-text);
+  --neutral-8-hsl: var(--sf-text-hsl);
+  --neutral-8: var(--sf-text);
+  --neutral-12-hsl: var(--sf-text-hsl);
+  --neutral-12: var(--sf-text);
+  
+  /* Mid-tone neutrals */
+  --neutral-40-hsl: var(--sf-lavender-hsl);
+  --neutral-40: var(--sf-lavender);
+  --neutral-45-hsl: 210deg 11% 29%;
+  --neutral-45: var(--sf-dark4);
+  --neutral-49-hsl: var(--sf-dark3-hsl);
+  --neutral-49: var(--sf-dark3);
+  
+  /* Dark backgrounds */
+  --neutral-63-hsl: var(--sf-dark3-hsl);
+  --neutral-63: var(--sf-dark3);
+  --neutral-66-hsl: var(--sf-dark2-hsl);
+  --neutral-66: var(--sf-dark2);
+  --neutral-69-hsl: var(--sf-dark2-hsl);
+  --neutral-69: var(--sf-dark2);
+  --neutral-72-hsl: var(--sf-dark1-hsl);
+  --neutral-72: var(--sf-dark1);
+  --neutral-76-hsl: var(--sf-dark1-hsl);
+  --neutral-76: var(--sf-dark1);
+  --neutral-83-hsl: 200deg 15% 15%;
+  --neutral-83: #222a2e;
+  --neutral-97-hsl: 200deg 18% 10%;
+  --neutral-97: #1a1f22;
+  
+  /* Brand colors using Sakura Forest accents */
+  --blurple-49-hsl: var(--sf-green-hsl);
+  --blurple-49: var(--sf-green);
+  --blurple-65-hsl: var(--sf-mauve-hsl);
+  --blurple-65: var(--sf-mauve);
+  --blurple-87-hsl: 95deg 31% 50%;
+  --blurple-87: #86b378;
+  
+  /* Status colors */
+  --green-new-62-hsl: var(--sf-green-hsl);
+  --green-new-62: var(--sf-green);
+  --red-new-61-hsl: var(--sf-red-hsl);
+  --red-new-61: var(--sf-red);
+  --yellow-new-57-hsl: var(--sf-yellow-hsl);
+  --yellow-new-57: var(--sf-yellow);
+  --orange-new-63-hsl: var(--sf-peach-hsl);
+  --orange-new-63: var(--sf-peach);
+  
+  /* Links and interactive */
+  --blue-new-35-hsl: var(--sf-flamingo-hsl);
+  --blue-new-35: var(--sf-flamingo);
+  
+  /* Premium/special colors */
+  --premium-tier-2-purple-hsl: var(--sf-flamingo-hsl);
+  --premium-tier-2-purple: var(--sf-flamingo);
+  --premium-tier-2-pink-hsl: var(--sf-flamingo-hsl);
+  --premium-tier-2-pink: var(--sf-flamingo);
+  --guild-boosting-pink: var(--sf-flamingo);
+  --guild-boosting-purple: var(--sf-mauve);
+}
+
+.visual-refresh .theme-dark,
+.visual-refresh.theme-dark {
+  --background-primary: var(--sf-dark2);
+  --background-secondary: var(--sf-dark3);
+  --background-tertiary: var(--sf-dark1);
+  --bg-base-secondary: var(--sf-dark2);
+  --chat-background-default: var(--sf-dark3);
+  
+  --text-normal: var(--sf-text);
+  --text-primary: var(--sf-text);
+  --text-secondary: var(--sf-text);
+  --text-link: var(--sf-flamingo);
+  
+  --interactive-active: var(--sf-peach);
+  --interactive-hover: var(--sf-flamingo);
+  --interactive-muted: var(--sf-lavender);
+  
+  --background-mentioned: hsla(var(--sf-green-hsl) / 0.16);
+  --background-mentioned-hover: hsla(var(--sf-green-hsl) / 0.12);
+  --background-message-highlight: hsla(var(--sf-green-hsl) / 0.16);
+  --background-message-highlight-hover: hsla(var(--sf-green-hsl) / 0.12);
+  
+  --button-danger-background: var(--sf-red);
+  --button-positive-background: var(--sf-green);
+  
+  --mention-background: hsla(var(--sf-flamingo-hsl) / 0.24);
+  --mention-foreground: var(--sf-flamingo);
+}
+
+/* Custom tweaks for better Sakura Forest integration */
+.visual-refresh .theme-dark,
+.visual-refresh.theme-dark {
+  --status-positive: var(--sf-green);
+  --status-danger: var(--sf-red);
+  --status-warning: var(--sf-yellow);
+}
+
+/* Selection and accent colors */
+::selection {
+  background-color: hsla(var(--sf-flamingo-hsl) / 0.25);
+}
+
+/* Make brand-colored elements use warm mint text */
+.textBadge__2b1f5[style*="background-color: var(--bg-brand);"],
+.lookFilled__201d5.colorBrand__201d5,
+.lookFilled__201d5.colorGreen__201d5 {
+  color: var(--sf-dark1) !important;
+}
+
+/* Include all the Nordic theme structure and rules from the original */
+.visual-refresh {
+  --user-status-online-hsl: var(--sf-green-hsl);
+  --user-status-online: var(--sf-green);
+  --user-status-idle-hsl: var(--sf-yellow-hsl);
+  --user-status-idle: var(--sf-yellow);
+  --user-status-dnd-hsl: var(--sf-red-hsl);
+  --user-status-dnd: var(--sf-red);
+  --user-status-invisible-hsl: var(--neutral-40-hsl);
+  --user-status-invisible: var(--neutral-40);
+  --user-status-twitch-hsl: var(--sf-mauve-hsl);
+  --user-status-twitch: var(--sf-mauve);
+}
+
+.visual-refresh .theme-dark,
+.visual-refresh .theme-light,
+.visual-refresh.theme-dark,
+.visual-refresh.theme-light {
+  --button-danger-background: var(--sf-red);
+  --button-danger-background-active: hsl(359deg 58% 65%);
+  --button-danger-background-disabled: var(--sf-red);
+  --button-danger-background-hover: hsl(359deg 63% 70%);
+  --button-danger-border: hsla(var(--sf-red-hsl) / 0.08);
+  --button-filled-brand-text: var(--sf-dark1);
+  --button-filled-brand-inverted-text: var(--blurple-87);
+  --button-positive-background: var(--sf-green);
+  --button-positive-background-active: hsl(95deg 34% 60%);
+  --button-positive-background-disabled: var(--sf-green);
+  --button-positive-background-hover: hsl(95deg 36% 64%);
+  --button-positive-border: hsla(var(--sf-green-hsl) / 0.08);
+  --control-text-active-default: var(--sf-dark1);
+  --control-text-active-hover: var(--sf-dark1);
+  --control-background-active-hover: hsl(95deg 36% 64%);
+  --control-text-active-active: var(--neutral-4);
+  --control-background-active-active: hsl(95deg 34% 60%);
+  --control-text-primary-default: var(--sf-dark1);
+  --control-text-primary-hover: var(--sf-dark1);
+  --control-text-primary-active: var(--neutral-4);
+  --control-background-critical-primary-hover: hsl(359deg 63% 70%);
+  --control-background-critical-primary-active: hsl(359deg 58% 65%);
+  --button-outline-danger-border: transparent;
+  --button-outline-danger-border-active: transparent;
+  --button-outline-danger-border-hover: transparent;
+  --button-outline-danger-text: var(--sf-red);
+  --button-outline-danger-text-active: var(--sf-red);
+  --button-outline-danger-text-hover: var(--sf-red);
+  --info-danger-background: hsla(var(--sf-red-hsl) / 0.1);
+  --info-danger-text: var(--sf-red);
+  --info-help-background: hsla(var(--sf-mauve-hsl) / 0.15);
+  --info-help-text: var(--sf-mauve);
+  --info-positive-background: hsla(var(--sf-green-hsl) / 0.1);
+  --info-positive-text: var(--sf-green);
+  --info-warning-background: hsla(var(--sf-yellow-hsl) / 0.08);
+  --info-warning-text: var(--sf-yellow);
+  --message-reacted-background: hsla(var(--sf-green-hsl) / 0.3);
+  --premium-nitro-pink-text: var(--sf-flamingo);
+  --text-link: var(--sf-flamingo);
+  --background-feedback-critical: hsla(var(--sf-red-hsl) / 0.1);
+  --background-feedback-info: hsla(var(--sf-mauve-hsl) / 0.1);
+  --background-feedback-positive: hsla(var(--sf-green-hsl) / 0.1);
+  --background-feedback-warning: hsla(var(--sf-yellow-hsl) / 0.1);
+  --border-feedback-critical: hsla(var(--sf-red-hsl) / 0.2);
+  --notice-background-critical: var(--sf-red);
+  --notice-background-info: var(--sf-mauve);
+  --notice-background-positive: var(--sf-green);
+  --notice-background-warning: var(--sf-yellow);
+  --notice-text-critical: var(--sf-text);
+  --notice-text-info: var(--sf-text);
+  --notice-text-positive: var(--sf-dark1);
+  --notice-text-warning: var(--sf-dark1);
+}
+
+.visual-refresh .theme-dark,
+.visual-refresh.theme-dark {
+  --background-mentioned: hsla(var(--sf-green-hsl) / 0.16);
+  --background-mentioned-hover: hsla(var(--sf-green-hsl) / 0.12);
+  --background-message-highlight: hsla(var(--sf-green-hsl) / 0.16);
+  --background-message-highlight-hover: hsla(var(--sf-green-hsl) / 0.12);
+  --background-message-hover: hsla(var(--neutral-45-hsl) / 0.15);
+  --background-modifier-accent: hsla(var(--neutral-34-hsl) / 0.3);
+  --background-modifier-active: hsla(var(--neutral-34-hsl) / 0.25);
+  --background-modifier-hover: hsla(var(--neutral-34-hsl) / 0.2);
+  --background-modifier-selected: hsla(var(--neutral-40-hsl) / 0.5);
+  --background-primary: var(--neutral-66);
+  --bg-base-secondary: var(--neutral-69);
+  --bg-mod-faint: hsla(var(--neutral-34-hsl) / 0.1);
+  --bg-mod-strong: hsla(var(--neutral-40-hsl) / 0.5);
+  --bg-mod-subtle: hsla(var(--neutral-40-hsl) / 0.2);
+  --button-outline-danger-background: hsla(var(--nord-dark4-hsl) / 0.5);
+  --button-outline-danger-background-active: hsla(var(--nord-dark4-hsl) / 0.7);
+  --button-outline-danger-background-hover: var(--nord-dark4);
+  --button-secondary-background: hsla(var(--neutral-40-hsl) / 0.2);
+  --button-secondary-background-active: hsla(var(--neutral-40-hsl) / 0.5);
+  --button-secondary-background-disabled: hsla(var(--neutral-40-hsl) / 0.2);
+  --button-secondary-background-hover: hsla(var(--neutral-40-hsl) / 0.35);
+  --icon-primary: var(--neutral-8);
+  --input-background: hsla(var(--black-hsl) / 0.1);
+  --mention-background: hsla(var(--sf-flamingo-hsl) / 0.24);
+  --mention-foreground: var(--sf-flamingo);
+  --message-reacted-text: var(--sf-text);
+  --text-normal: var(--neutral-12);
+  --text-primary: var(--neutral-8);
+  --text-secondary: var(--neutral-12);
+  --background-base-low: var(--neutral-63);
+  --background-base-lower: var(--neutral-69);
+  --background-mod-faint: hsla(var(--neutral-34-hsl) / 0.1);
+  --background-mod-normal: hsla(var(--neutral-34-hsl) / 0.25);
+  --background-mod-strong: hsla(var(--neutral-40-hsl) / 0.4);
+  --background-mod-subtle: hsla(var(--neutral-40-hsl) / 0.3);
+  --background-surface-higher: var(--neutral-66);
+  --chat-background-default: var(--neutral-49);
+  --interactive-muted: var(--neutral-40);
+  --channel-text-area-placeholder: var(--neutral-34);
+}
+
+/* Additional color tweaks */
+.tooltipBrand__382e7,
+.tooltipGreen__382e7,
+.textBadge__2b1f5[style*="background-color: var(--bg-brand);"],
+.textBadge__2b1f5[style*="background-color: var(--brand-500)"] {
+  color: var(--sf-dark1);
+}
+
+.content__487be a {
+  color: var(--text-link);
+}
+
+/* Status indicators */
+.mask__44b0c rect[fill="#43a25a"] {
+  fill: var(--user-status-online);
+}
+.mask__44b0c rect[fill="#ca9654"] {
+  fill: var(--user-status-idle);
+}
+.mask__44b0c rect[fill="#d83a42"] {
+  fill: var(--user-status-dnd);
+}
+
+/* User badges and icons using dark background for visibility */
+.activeButton_c15210,
+.addButton_a76561,
+.colorable_f1ceac.join_f1ceac,
+.colorable_f1ceac.join_f1ceac .centerIcon_f1ceac,
+.lookFilled__201d5.colorBrand__201d5 .defaultColor__4bd52,
+.lookFilled__201d5.colorGreen__201d5 {
+  color: var(--sf-dark1);
+}
+
+/* Interactive elements on brand colors */
+.interactive:hover,
+.newMessagesBar__0f481 .barButtonBase__0f481 {
+  color: var(--sf-dark1);
+}
