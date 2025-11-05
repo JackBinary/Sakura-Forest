@@ -16,7 +16,7 @@
   
   /* Vibrant Accents (from Catppuccin) */
   --sf-flamingo: #eebebe;  /* 238, 190, 190 - Primary accent/links */
-  --sf-peach: #ef9f76;     /* 239, 159, 118 - Active elements */
+  --sf-pink: #f4b8e4;      /* 244, 184, 228 - Active elements */
   --sf-green: #a6d189;     /* 166, 209, 137 - Positive/success */
   --sf-red: #e78284;       /* 231, 130, 132 - Negative/danger */
   --sf-yellow: #e5c890;    /* 229, 200, 144 - Warning/neutral */
@@ -29,7 +29,7 @@
   --sf-dark2-hsl: 200deg 10% 25%;
   --sf-dark3-hsl: 200deg 14% 20%;
   --sf-flamingo-hsl: 0deg 59% 84%;
-  --sf-peach-hsl: 20deg 75% 65%;
+  --sf-pink-hsl: 316deg, 73%, 84%;
   --sf-green-hsl: 95deg 39% 68%;
   --sf-red-hsl: 359deg 68% 73%;
   --sf-yellow-hsl: 40deg 62% 73%;
@@ -60,8 +60,8 @@
   --nord-pink: var(--sf-flamingo);
   --nord-red-hsl: var(--sf-red-hsl);
   --nord-red: var(--sf-red);
-  --nord-orange-hsl: var(--sf-peach-hsl);
-  --nord-orange: var(--sf-peach);
+  --nord-orange-hsl: var(--sf-pink-hsl);
+  --nord-orange: var(--sf-pink);
   --nord-yellow-hsl: var(--sf-yellow-hsl);
   --nord-yellow: var(--sf-yellow);
   --nord-green-hsl: var(--sf-green-hsl);
@@ -130,8 +130,8 @@
   --red-new-61: var(--sf-red);
   --yellow-new-57-hsl: var(--sf-yellow-hsl);
   --yellow-new-57: var(--sf-yellow);
-  --orange-new-63-hsl: var(--sf-peach-hsl);
-  --orange-new-63: var(--sf-peach);
+  --orange-new-63-hsl: var(--sf-pink-hsl);
+  --orange-new-63: var(--sf-pink);
   
   /* Links and interactive */
   --blue-new-35-hsl: var(--sf-flamingo-hsl);
@@ -159,7 +159,7 @@
   --text-secondary: var(--sf-text);
   --text-link: var(--sf-flamingo);
   
-  --interactive-active: var(--sf-peach);
+  --interactive-active: var(--sf-pink);
   --interactive-hover: var(--sf-flamingo);
   --interactive-muted: var(--sf-lavender);
   
